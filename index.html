@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simon Says Game</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="game-container">
+      <h1>Simon Says</h1>
+      <div class="username-input">
+        <input type="text" id="username" placeholder="Enter your name" />
+      </div>
+      <div class="score">Score: <span id="score">0</span></div>
+      <div class="grid">
+        <div class="tile" id="green" onclick="handleClick('green')"></div>
+        <div class="tile" id="red" onclick="handleClick('red')"></div>
+        <div class="tile" id="yellow" onclick="handleClick('yellow')"></div>
+        <div class="tile" id="blue" onclick="handleClick('blue')"></div>
+      </div>
+      <div class="controls">
+        <button class="pause" onclick="pauseGame()">Pause</button>
+        <button class="start" onclick="startGame()">Start Game</button>
+        <button class="restart" onclick="restartGame()">Restart</button>
+      </div>
+      <p id="status" class="blinking">Press "Start Game" to begin</p>
+    </div>
+    <div class="leaderboard">
+      <h2>Leaderboard</h2>
+      <ul id="leaderboard-list"></ul>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
